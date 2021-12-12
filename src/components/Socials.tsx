@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 
 interface SocialsProps {}
 
-export const Socials: React.FC<SocialsProps> = ({}) => {
+export const Socials: React.FC<SocialsProps> = () => {
   return (
     <Button
       ml="1%"

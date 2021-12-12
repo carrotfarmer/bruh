@@ -3,7 +3,7 @@ import React from "react";
 
 interface BruhProps {}
 
-export const Bruh: React.FC<BruhProps> = ({}) => {
+export const Bruh: React.FC<BruhProps> = () => {
   return (
     <div>
       <Center>
