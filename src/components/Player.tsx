@@ -13,9 +13,9 @@ interface PlayerProps {}
 
 export const Player: React.FC<PlayerProps> = () => {
   // bruh
-  let audio = new Audio("/bruh.mp3");
+  let audio: HTMLAudioElement = new Audio("/bruh.mp3");
 
-  const start = () => audio.play();
+  const start = (): Promise<void> => audio.play();
   const changePlaybackSpeed = (speed: number): number =>
     (audio.playbackRate = speed / 10);
 
