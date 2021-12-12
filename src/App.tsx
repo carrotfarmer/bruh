@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Center } from "@chakra-ui/react";
+import React from "react";
 
-function App() {
+// my stupid components
+import { Bruh } from "./components/Bruh";
+import { Player } from "./components/Player";
+import { Socials } from "./components/Socials";
+import { Switch } from "./components/Switch";
+
+function App(): JSX.Element {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Center mb={"2%"} mt={"2%"}>
+        <Switch />
+        <Socials />
+      </Center>
+      <Bruh />
+      <Player />
     </div>
   );
 }
