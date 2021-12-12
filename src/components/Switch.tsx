@@ -4,7 +4,7 @@ import React from "react";
 
 interface SwitchProps {}
 
-export const Switch: React.FC<SwitchProps> = ({}) => {
+export const Switch: React.FC<SwitchProps> = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <header>
