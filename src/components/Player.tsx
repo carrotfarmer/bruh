@@ -9,6 +9,9 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
+// constants file
+import { Speeds } from "../constants";
+
 interface PlayerProps {}
 
 export const Player: React.FC<PlayerProps> = () => {
@@ -41,13 +44,21 @@ export const Player: React.FC<PlayerProps> = () => {
             speed
           </MenuButton>
           <MenuList>
-            <MenuItem onClick={() => changePlaybackSpeed(2.5)}>
+            <MenuItem onClick={() => changePlaybackSpeed(Speeds.THICC_SPEED)}>
               thiccccc
             </MenuItem>
-            <MenuItem onClick={() => changePlaybackSpeed(5)}>slooww</MenuItem>
-            <MenuItem onClick={() => changePlaybackSpeed(7.5)}>slow</MenuItem>
-            <MenuItem onClick={() => changePlaybackSpeed(10)}>normal</MenuItem>
-            <MenuItem onClick={() => changePlaybackSpeed(15)}>racecar</MenuItem>
+            <MenuItem onClick={() => changePlaybackSpeed(Speeds.SLOWWW_SPEED)}>
+              slooww
+            </MenuItem>
+            <MenuItem onClick={() => changePlaybackSpeed(Speeds.SLOW_SPEED)}>
+              slow
+            </MenuItem>
+            <MenuItem onClick={() => changePlaybackSpeed(Speeds.NORMAL_SPEED)}>
+              normal
+            </MenuItem>
+            <MenuItem onClick={() => changePlaybackSpeed(Speeds.RACECAR_SPEED)}>
+              racecar
+            </MenuItem>
           </MenuList>
         </Menu>
       </Center>
