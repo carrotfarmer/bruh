@@ -7,6 +7,7 @@ export enum Speeds {
   SLOW_SPEED = 7.5,
   NORMAL_SPEED = 10,
   RACECAR_SPEED = 15,
+  ROCKET_SPEED = 20,
 }
 
 export const DEFAULT_THEME: ConfigColorMode = "dark";

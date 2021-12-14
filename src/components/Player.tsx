@@ -59,6 +59,9 @@ export const Player: React.FC<PlayerProps> = () => {
             <MenuItem onClick={() => changePlaybackSpeed(Speeds.RACECAR_SPEED)}>
               racecar
             </MenuItem>
+            <MenuItem onClick={() => changePlaybackSpeed(Speeds.ROCKET_SPEED)}>
+              rocket (ft: elon musk)
+            </MenuItem>
           </MenuList>
         </Menu>
       </Center>
