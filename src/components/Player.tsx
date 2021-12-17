@@ -1,5 +1,6 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
+  Box,
   Button,
   Center,
   Menu,
@@ -21,6 +22,8 @@ export const Player: React.FC<PlayerProps> = () => {
   const start = (): Promise<void> => audio.play();
   const changePlaybackSpeed = (speed: number): number =>
     (audio.playbackRate = speed / 10);
+  const changeAudio = (newSoundEffect: HTMLAudioElement): HTMLAudioElement =>
+    (audio = newSoundEffect);
 
   return (
     <div>
@@ -44,6 +47,11 @@ export const Player: React.FC<PlayerProps> = () => {
             speed
           </MenuButton>
           <MenuList>
+            <MenuItem
+              onClick={() => changePlaybackSpeed(Speeds.INSTANT_DETH_SPEED)}
+            >
+              instant deth
+            </MenuItem>
             <MenuItem onClick={() => changePlaybackSpeed(Speeds.THICC_SPEED)}>
               thiccccc
             </MenuItem>
@@ -63,6 +71,41 @@ export const Player: React.FC<PlayerProps> = () => {
               rocket (ft: elon musk)
             </MenuItem>
           </MenuList>
+        </Menu>
+        <Menu>
+          <Box pl={"2%"}>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+              effex
+            </MenuButton>
+            <MenuList>
+              <MenuItem
+                onClick={() => {
+                  let normie: HTMLAudioElement = new Audio("/bruh.mp3");
+                  changeAudio(normie);
+                }}
+              >
+                normie bruh
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  let reverb: HTMLAudioElement = new Audio(
+                    "/bruh_with_extra_reverb.mp3"
+                  );
+                  changeAudio(reverb);
+                }}
+              >
+                reverb-b-b
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  let hurb: HTMLAudioElement = new Audio("/urb.mp3");
+                  changeAudio(hurb);
+                }}
+              >
+                hurb
+              </MenuItem>
+            </MenuList>
+          </Box>
         </Menu>
       </Center>
     </div>
